@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Apparel Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="CAT_Handwear_ReconGloves" or defName="CAT_Footwear_ReconBoots" or defName="CAT_Handwear_HeavyMarineGloves" or defName="CAT_Footwear_HeavyMarineBoots" or defName="CAT_Handwear_CrusaderGloves" or defName="CAT_Footwear_CrusaderBoots" or defName="CAT_Handwear_FlakGloves" or defName="CAT_Footwear_FlakBoots" or defName="CAT_Handwear_RiotGloves" or defName="CAT_Footwear_RiotBoots"]/thingCategories</xpath>
+					<value>
+						<thingCategories Inherit="False">
+							<li>VAE_BootsAndGloves</li>
+						</thingCategories>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Apparel Expanded</li>
+		</mods>
+	<match Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="CAT_Handwear_VacsuitGloves" or defName="CAT_Footwear_VacsuitBoots"]/thingCategories</xpath>
+					<value>
+						<thingCategories Inherit="False">
+							<li>VAE_BootsAndGloves</li>
+						</thingCategories>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</match>
+	</Operation>
+
+</Patch>

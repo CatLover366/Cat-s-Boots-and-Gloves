@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Cat's Boots and Gloves</name>
+	<author>TheCatLover366</author>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<modIconPath IgnoreIfNoMatchingField="True">UI/CAT_BAG_logo</modIconPath>
+	<packageId>CatLover366.BootsAndGloves</packageId>
+	<loadAfter>
+		<li>CETeam.CombatExtended</li>
+		<li>OskarPotocki.VFE.Empire</li>
+		<li>VanillaExpanded.VARME</li>
+	</loadAfter>
+	<modDependencies />
+	<description>mmm feet</description>
+</ModMetaData>

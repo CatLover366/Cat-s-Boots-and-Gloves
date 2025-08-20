@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ===== Spacer Tech Gloves ===== -->
+
+
+
+	<!-- ===== Recon ===== -->
+
+	<ThingDef ParentName="ApparelMakeableBase">
+		<defName>CAT_Handwear_ReconGloves</defName>
+		<label>recon gloves</label>
+		<description>A pair of light power armor gloves, with plasteel plates covering the majority of the wearer's fingers and hand. Tactile amplifiers and built in neuro-memetic assistors help the wearer with reloading and aiming more efficiently.</description>
+		<graphicData>
+			<texPath>Things/Handwear/CAT_ReconGloves</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0.25</generateCommonality>
+		<costList>
+			<Plasteel>5</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<statBases>
+			<MaxHitPoints>140</MaxHitPoints>
+			<WorkToMake>12000</WorkToMake>
+			<Mass>2.5</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.74</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.32</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.37</ArmorRating_Heat>
+			<Insulation_Cold>2</Insulation_Cold>
+			<Insulation_Heat>4</Insulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<RangedCooldownFactor>-0.05</RangedCooldownFactor>
+			<AimingDelayFactor>-0.05</AimingDelayFactor>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Hands</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>SpacerMilitary</li>
+				<li>RoyalTier2</li>
+				<li>RoyalTier3</li>
+				<li>RoyalTier4</li>
+				<li>RoyalTier5</li>
+				<li>RoyalTier6</li>
+				<li>RoyalTier7</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>ReconArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<displayPriority>115</displayPriority>
+		</recipeMaker>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+	<!-- ===== Heavy ===== -->
+
+	<ThingDef ParentName="ApparelMakeableBase">
+		<defName>CAT_Handwear_HeavyMarineGloves</defName>
+		<label>heavy power armor gauntlets</label>
+		<description>A pair of reinforced power armor gauntlets, with plating going from fingers to forearm without sacrificing fine motor control. They are fitted with reflex synchronizers that help guide the user to make clean, efficient strikes.</description>
+		<graphicData>
+			<texPath>Things/Handwear/CAT_HeavyMarineGloves</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0.1</generateCommonality>
+		<costList>
+			<Plasteel>25</Plasteel>
+			<Steel>25</Steel>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<statBases>
+			<MaxHitPoints>220</MaxHitPoints>
+			<WorkToMake>20000</WorkToMake>
+			<Mass>2.5</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.54</ArmorRating_Heat>
+			<Insulation_Cold>3</Insulation_Cold>
+			<Insulation_Heat>6</Insulation_Heat>
+			<EquipDelay>3.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MeleeCooldownFactor>-0.05</MeleeCooldownFactor>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Hands</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>SpacerMilitary</li>
+				<li>RoyalTier2</li>
+				<li>RoyalTier3</li>
+				<li>RoyalTier4</li>
+				<li>RoyalTier5</li>
+				<li>RoyalTier6</li>
+				<li>RoyalTier7</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>PoweredArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<displayPriority>125</displayPriority>
+		</recipeMaker>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+	<!-- ===== Crusader ===== -->
+
+	<ThingDef ParentName="ApparelMakeableBase" MayRequire="detvisor.impactweaponryreloaded">
+		<defName>CAT_Handwear_CrusaderGloves</defName>
+		<label>crusader gauntlets</label>
+		<description>A pair of ultraheavy power armor gauntlets, with fingers to elbow covered by reinforced plasteel plating capable of deflecting even the most grievous attacks.\n\nNumerous neuro-memetic assistors manage to provide the wearer unimpeded use of their hands. Additionally, the considerable weight of the gauntlets add weight to the wearer's melee strikes, as well as acting as a natural recoil buffer.</description>
+		<graphicData>
+			<texPath>Things/Handwear/CAT_CrusaderGloves</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0</generateCommonality>
+		<costList>
+			<Plasteel>35</Plasteel>
+			<Uranium>25</Uranium>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToMake>30000</WorkToMake>
+			<Mass>2.5</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.54</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<Insulation_Cold>3</Insulation_Cold>
+			<Insulation_Heat>6</Insulation_Heat>
+			<EquipDelay>5.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MeleeArmorPenetration>0.1</MeleeArmorPenetration>
+			<ShootingAccuracyPawn>1.0</ShootingAccuracyPawn>
+			<CarryingCapacity>5</CarryingCapacity>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Hands</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>SpacerMilitary</li>
+				<li>RoyalTier2</li>
+				<li>RoyalTier3</li>
+				<li>RoyalTier4</li>
+				<li>RoyalTier5</li>
+				<li>RoyalTier6</li>
+				<li>RoyalTier7</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>DV_CrusaderArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>9</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<displayPriority>125</displayPriority>
+		</recipeMaker>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+
+
+	<!-- ===== Industrial Tech Gloves ===== -->
+
+
+
+	<!-- ===== Flak ===== -->
+
+	<ThingDef ParentName="ArmorMachineableBase">
+		<defName>CAT_Handwear_FlakGloves</defName>
+		<label>flak gloves</label>
+		<description>A pair of gloves with steel plates protecting the hand and fingers.   Slightly cumbersome to work in, but offers good protection while being comfortable to wear.</description>
+		<graphicData>
+			<texPath>Things/Handwear/CAT_FlakGloves</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Industrial</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0.2</generateCommonality>
+		<costList>
+			<Cloth>15</Cloth>
+			<Steel>25</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>8000</WorkToMake>
+			<Mass>2</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.51</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.06</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.08</ArmorRating_Heat>
+			<Insulation_Cold>1</Insulation_Cold>
+			<Insulation_Heat>3</Insulation_Heat>
+			<EquipDelay>2.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<GeneralLaborSpeed>-0.02</GeneralLaborSpeed>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Hands</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>IndustrialMilitary</li>
+				<li>IndustrialMilitaryAdvanced</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<only>(0.44,0.44,0.44)</only>
+				</li>
+				<li>
+					<only>(0.62,0.62,0.62)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>FlakArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+			<displayPriority>230</displayPriority>
+		</recipeMaker>
+	</ThingDef>
+
+	<!-- ===== Riot ===== -->
+
+	<ThingDef ParentName="ArmorMachineableBase">
+		<defName>CAT_Handwear_RiotGloves</defName>
+		<label>riot gloves</label>
+		<description>A pair of gloves fortified with padded plates. A bit bulky, but good for preventing your digits from being removed by any sudden blunt force trauma, which helps when trying to detain more rowdy prisoners.</description>
+		<graphicData>
+			<texPath>Things/Handwear/CAT_RiotGloves</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Industrial</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0</generateCommonality>
+		<costList>
+			<Cloth>15</Cloth>
+			<Steel>25</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>14000</WorkToMake>
+			<Mass>2</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.27</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.92</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.16</ArmorRating_Heat>
+			<Insulation_Cold>1</Insulation_Cold>
+			<Insulation_Heat>3</Insulation_Heat>
+			<EquipDelay>2.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ArrestSuccessChance>0.1</ArrestSuccessChance>
+			<GeneralLaborSpeed>-0.02</GeneralLaborSpeed>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Hands</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>IndustrialMilitary</li>
+				<li>IndustrialMilitaryAdvanced</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65,1)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3,1)</min>
+					<max>(0.5,0.5,0.5,1)</max>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.2,0.2,0.2,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>FlakArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+
+
+	<!-- ===== Vac ===== -->
+
+	<ThingDef ParentName="ApparelMakeableBase" MayRequire="Ludeon.Rimworld.Odyssey">
+		<defName>CAT_Handwear_VacsuitGloves</defName>
+		<label>vacsuit gloves</label>
+		<description>A pair of protective gloves that slightly protect the wearer from the vacuum of space. These gloves possess vibration dampeners, which allow the wearer to maintain steady hands even during the turbulent launch of a gravship.</description>
+		<graphicData>
+			<texPath>Things/Handwear/CAT_VacsuitGloves</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateAllowChance>0</generateAllowChance>
+		<costList>
+			<Plasteel>5</Plasteel>
+			<Steel>10</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>16000</WorkToMake>
+			<Mass>2.5</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.42</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.53</ArmorRating_Heat>
+			<Insulation_Cold>4</Insulation_Cold>
+			<Insulation_Heat>8</Insulation_Heat>
+			<EquipDelay>5.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PilotingAbility>0.075</PilotingAbility>
+			<VacuumResistance>0.01</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Hands</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>SpacerMilitary</li>
+				<li>Vacsuit</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Spacefarer</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>OrbitalTech</researchPrerequisite>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers Inherit="False">
+				<li>TableMachining</li>
+			</recipeUsers>
+			<displayPriority>235</displayPriority>
+		</recipeMaker>
+	</ThingDef>
+
+</Defs>

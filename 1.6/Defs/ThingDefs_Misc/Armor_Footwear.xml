@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ===== Spacer Tech Boots ===== -->
+
+
+
+	<!-- ===== Recon ===== -->
+
+	<ThingDef ParentName="ApparelMakeableBase">
+		<defName>CAT_Footwear_ReconBoots</defName>
+		<label>recon boots</label>
+		<description>A pair of light power armor boots, fitted with strategically placed plasteel plates and servomotors. Their relatively light weight allows the servomotors to work without hinderance.</description>
+		<graphicData>
+			<texPath>Things/Footwear/CAT_ReconBoots</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0.25</generateCommonality>
+		<costList>
+			<Plasteel>5</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<statBases>
+			<MaxHitPoints>140</MaxHitPoints>
+			<WorkToMake>12000</WorkToMake>
+			<Mass>2.5</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.74</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.32</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.37</ArmorRating_Heat>
+			<Insulation_Cold>2</Insulation_Cold>
+			<Insulation_Heat>4</Insulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>0.1</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>SpacerMilitary</li>
+				<li>RoyalTier2</li>
+				<li>RoyalTier3</li>
+				<li>RoyalTier4</li>
+				<li>RoyalTier5</li>
+				<li>RoyalTier6</li>
+				<li>RoyalTier7</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>ReconArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<displayPriority>115</displayPriority>
+		</recipeMaker>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+	<!-- ===== Heavy ===== -->
+
+	<ThingDef ParentName="ApparelMakeableBase">
+		<defName>CAT_Footwear_HeavyMarineBoots</defName>
+		<label>heavy power armor boots</label>
+		<description>A pair of heavy power armor boots, layered with thick plasteel plates and fitted with enough servomotors to keep the wearer unimpeded. Its sturdy build and heavier weight helps to keep the wearer stable.</description>
+		<graphicData>
+			<texPath>Things/Footwear/CAT_HeavyMarineBoots</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0.1</generateCommonality>
+		<costList>
+			<Plasteel>25</Plasteel>
+			<Steel>25</Steel>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<statBases>
+			<MaxHitPoints>220</MaxHitPoints>
+			<WorkToMake>20000</WorkToMake>
+			<Mass>2.5</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.54</ArmorRating_Heat>
+			<Insulation_Cold>3</Insulation_Cold>
+			<Insulation_Heat>6</Insulation_Heat>
+			<EquipDelay>3.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<StaggerDurationFactor>-0.1</StaggerDurationFactor>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>SpacerMilitary</li>
+				<li>RoyalTier2</li>
+				<li>RoyalTier3</li>
+				<li>RoyalTier4</li>
+				<li>RoyalTier5</li>
+				<li>RoyalTier6</li>
+				<li>RoyalTier7</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>PoweredArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<displayPriority>125</displayPriority>
+		</recipeMaker>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+	<!-- ===== Crusader ===== -->
+
+	<ThingDef ParentName="ApparelMakeableBase" MayRequire="detvisor.impactweaponryreloaded">
+		<defName>CAT_Footwear_CrusaderBoots</defName>
+		<label>crusader sabatons</label>
+		<description>A pair of ultraheavy power armor boots, laden with reinforced plasteel plates that are capable of stopping even the largest projectiles in their tracks.\n\nNumerous servomotors allow the wearer to move unimpeded, while hydraulics inside the boots provide additional stability and carry capacity.</description>
+		<graphicData>
+			<texPath>Things/Footwear/CAT_CrusaderBoots</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0</generateCommonality>
+		<costList>
+			<Plasteel>35</Plasteel>
+			<Uranium>25</Uranium>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToMake>30000</WorkToMake>
+			<Mass>2.5</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.54</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<Insulation_Cold>3</Insulation_Cold>
+			<Insulation_Heat>6</Insulation_Heat>
+			<EquipDelay>5.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<StaggerDurationFactor>-0.25</StaggerDurationFactor>
+			<CarryingCapacity>10</CarryingCapacity>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>SpacerMilitary</li>
+				<li>RoyalTier2</li>
+				<li>RoyalTier3</li>
+				<li>RoyalTier4</li>
+				<li>RoyalTier5</li>
+				<li>RoyalTier6</li>
+				<li>RoyalTier7</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>DV_CrusaderArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>9</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<displayPriority>125</displayPriority>
+		</recipeMaker>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+
+
+	<!-- ===== Industrial Tech Boots ===== -->
+
+
+
+	<!-- ===== Flak ===== -->
+
+	<ThingDef ParentName="ArmorMachineableBase">
+		<defName>CAT_Footwear_FlakBoots</defName>
+		<label>flak boots</label>
+		<description>A pair of boots with steel plates covering the toes and most of the foot. Slightly cumbersome to move in, but offers good protection while being fairly comfortable to wear.</description>
+		<graphicData>
+			<texPath>Things/Footwear/CAT_FlakBoots</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Industrial</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0</generateCommonality>
+		<costList>
+			<Cloth>15</Cloth>
+			<Steel>25</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>8000</WorkToMake>
+			<Mass>2</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.51</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.06</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.08</ArmorRating_Heat>
+			<Insulation_Cold>1</Insulation_Cold>
+			<Insulation_Heat>3</Insulation_Heat>
+			<EquipDelay>2.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.05</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>IndustrialMilitary</li>
+				<li>IndustrialMilitaryAdvanced</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<only>(0.44,0.44,0.44)</only>
+				</li>
+				<li>
+					<only>(0.62,0.62,0.62)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>FlakArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+			<displayPriority>230</displayPriority>
+		</recipeMaker>
+	</ThingDef>
+
+	<!-- ===== Riot ===== -->
+
+	<ThingDef ParentName="ArmorMachineableBase">
+		<defName>CAT_Footwear_RiotBoots</defName>
+		<label>riot boots</label>
+		<description>A pair of boots bolstered with padded plates. A bit bulky, but good for preventing your digits from being removed by any sudden blunt force trauma, which helps when trying to detain more rowdy prisoners.</description>
+		<graphicData>
+			<texPath>Things/Footwear/CAT_RiotBoots</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Industrial</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0</generateCommonality>
+		<costList>
+			<Cloth>15</Cloth>
+			<Steel>25</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>8000</WorkToMake>
+			<Mass>2</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.27</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.92</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.16</ArmorRating_Heat>
+			<Insulation_Cold>1</Insulation_Cold>
+			<Insulation_Heat>3</Insulation_Heat>
+			<EquipDelay>2.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ArrestSuccessChance>0.1</ArrestSuccessChance>
+			<MoveSpeed>-0.05</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>IndustrialMilitary</li>
+				<li>IndustrialMilitaryAdvanced</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65,1)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3,1)</min>
+					<max>(0.5,0.5,0.5,1)</max>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.2,0.2,0.2,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>FlakArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+
+
+	<!-- ===== Vac ===== -->
+
+	<ThingDef ParentName="ApparelMakeableBase" MayRequire="Ludeon.Rimworld.Odyssey">
+		<defName>CAT_Footwear_VacsuitBoots</defName>
+		<label>vacsuit boots</label>
+		<description>A pair of protective boots that slightly protect the wearer from the vacuum of space. These boots contain gravity stabilizers specially designed to keep the wearer steady during a gravship launch, which helps with gravship piloting.</description>
+		<graphicData>
+			<texPath>Things/Footwear/CAT_VacsuitBoots</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateAllowChance>0</generateAllowChance>
+		<costList>
+			<Plasteel>5</Plasteel>
+			<Steel>10</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>16000</WorkToMake>
+			<Mass>2.5</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.42</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.53</ArmorRating_Heat>
+			<Insulation_Cold>4</Insulation_Cold>
+			<Insulation_Heat>8</Insulation_Heat>
+			<EquipDelay>5.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PilotingAbility>0.075</PilotingAbility>
+			<VacuumResistance>0.01</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>SpacerMilitary</li>
+				<li>Vacsuit</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Spacefarer</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>OrbitalTech</researchPrerequisite>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers Inherit="False">
+				<li>TableMachining</li>
+			</recipeUsers>
+			<displayPriority>235</displayPriority>
+		</recipeMaker>
+	</ThingDef>
+
+</Defs>

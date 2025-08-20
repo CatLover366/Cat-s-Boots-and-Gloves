@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Armour Expanded</li>
+		</mods>
+	<match Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="CAT_Handwear_HeavyMarineGloves" or defName="CAT_Footwear_HeavyMarineBoots"]/recipeMaker/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisite>VAE_SiegebreakerArmor</researchPrerequisite>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Armour Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="CAT_Handwear_ReconGloves" or defName="CAT_Footwear_ReconBoots" or defName="CAT_Handwear_HeavyMarineGloves" or defName="CAT_Footwear_HeavyMarineBoots" or defName="CAT_Handwear_CrusaderGloves" or defName="CAT_Footwear_CrusaderBoots" or defName="CAT_Handwear_FlakGloves" or defName="CAT_Footwear_FlakBoots" or defName="CAT_Handwear_RiotGloves" or defName="CAT_Footwear_RiotBoots"]/thingCategories</xpath>
+					<value>
+						<thingCategories Inherit="False">
+							<li>VAE_BootsAndGloves</li>
+						</thingCategories>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Armour Expanded</li>
+		</mods>
+	<match Class="PatchOperationFindMod">
+		<mods>
+			<li>Combat Extended</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VAE_Handwear_MarineGloves" or defName="VAE_Footwear_MarineBoots"]/statBases/ArmorRating_Sharp</xpath>
+					<value>
+						<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VAE_Handwear_MarineGloves" or defName="VAE_Footwear_MarineBoots"]/statBases/ArmorRating_Blunt</xpath>
+					<value>
+						<ArmorRating_Blunt>0.36</ArmorRating_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VAE_Handwear_MarineGloves" or defName="VAE_Footwear_MarineBoots"]/statBases/ArmorRating_Heat</xpath>
+					<value>
+						<ArmorRating_Heat>0.43</ArmorRating_Heat>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Armour Expanded</li>
+		</mods>
+	<match Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="CAT_Handwear_VacsuitGloves" or defName="CAT_Footwear_VacsuitBoots"]/thingCategories</xpath>
+					<value>
+						<thingCategories Inherit="False">
+							<li>VAE_BootsAndGloves</li>
+						</thingCategories>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</match>
+	</Operation>
+
+</Patch>

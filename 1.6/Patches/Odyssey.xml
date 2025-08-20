@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+	<match Class="PatchOperationFindMod">
+		<mods>
+			<li>Full Armor - Hands and Feet</li>
+			<li>Combat Extended</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="TradersGuildMidTierBase"]</xpath>
+					<value>
+						<apparelRequired>
+							<li>CAT_Handwear_VacsuitGloves</li>
+							<li>CAT_Footwear_VacsuitBoots</li>
+						</apparelRequired>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="TradersGuildEliteBase"]</xpath>
+					<value>
+						<apparelRequired>
+							<li>CAT_Handwear_HeavyMarineGloves</li>
+							<li>CAT_Footwear_HeavyMarineBoots</li>
+						</apparelRequired>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="TradersGuild_Magister"]</xpath>
+					<value>
+						<apparelRequired>
+							<li>CAT_Handwear_HeavyMarineGloves</li>
+							<li>CAT_Footwear_HeavyMarineBoots</li>
+						</apparelRequired>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="TradersGuild_Citizen"]</xpath>
+					<value>
+						<apparelRequired>
+							<li>CAT_Handwear_VacsuitGloves</li>
+							<li>CAT_Footwear_VacsuitBoots</li>
+						</apparelRequired>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="TradersGuild_Child"]</xpath>
+					<value>
+						<apparelRequired>
+							<li>CAT_Handwear_VacsuitGloves</li>
+							<li>CAT_Footwear_VacsuitBoots</li>
+						</apparelRequired>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</match>
+	</Operation>
+
+</Patch>

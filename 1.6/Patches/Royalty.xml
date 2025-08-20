@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="CAT_Handwear_HeavyMarineGloves" or defName="CAT_Footwear_HeavyMarineBoots"]/recipeMaker/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisite>CataphractArmor</researchPrerequisite>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>Vanilla Armour Expanded</li>
+			</mods>
+			<match Class="PatchOperationFindMod">
+				<mods>
+					<li>Full Armor - Hands and Feet</li>
+					<li>Combat Extended</li>
+				</mods>
+
+				<nomatch Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+
+						<li Class="PatchOperationRemove">
+							<xpath>/Defs/PawnKindDef[@Name="ImperialFighterBase"]/apparelRequired</xpath>
+						</li>
+					</operations>
+				</nomatch>
+			</match>
+		</match>
+	</Operation>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+	<match Class="PatchOperationFindMod">
+		<mods>
+			<li>Full Armor - Hands and Feet</li>
+			<li>Combat Extended</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="JanissaryBase"]/apparelRequired</xpath>
+					<value>
+						<li>CAT_Handwear_ReconGloves</li>
+						<li>CAT_Footwear_ReconBoots</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Grenadier"]/apparelRequired</xpath>
+					<value Inherit="False">
+						<li>CAT_Handwear_ReconGloves</li>
+						<li>CAT_Footwear_ReconBoots</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="CataphractBase"]</xpath>
+					<value>
+						<apparelRequired Inherit="False">
+							<li>CAT_Handwear_HeavyMarineGloves</li>
+							<li>CAT_Footwear_HeavyMarineBoots</li>
+						</apparelRequired>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="ImperialTrooperBase"]/apparelRequired</xpath>
+					<value>
+						<li>CAT_Handwear_ReconGloves</li>
+						<li>CAT_Footwear_ReconBoots</li>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</match>
+	</Operation>
+
+</Patch>
