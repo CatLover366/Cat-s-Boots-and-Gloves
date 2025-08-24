@@ -9,6 +9,37 @@
             <operations>
 
 
+
+	<!-- ===== Ultratech ===== -->
+
+
+
+	<!-- ===== Eltex Gloves ===== -->
+
+
+
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="CAT_Handwear_EltexGloves"]/apparel/layers</xpath>
+		<value>
+			<li>Shell</li>
+		</value>
+	</li>
+
+
+
+	<!-- ===== Eltex Boots ===== -->
+
+
+
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="CAT_Footwear_EltexBoots"]/apparel/layers</xpath>
+		<value>
+			<li>Shell</li>
+		</value>
+	</li>
+
+
+
 	<!-- ===== Spacer Tech ===== -->
 
 
@@ -257,6 +288,132 @@
 		</value>
 	</li>
 	
+
+
+	<!-- ===== Ensign Gloves ===== -->
+
+
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="CAT_Handwear_EnsignGloves"]/statBases/Mass</xpath>
+		<value>
+			<Bulk>3.5</Bulk>
+			<WornBulk>1</WornBulk>
+			<Mass>2.5</Mass>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="CAT_Handwear_EnsignGloves"]/statBases/MaxHitPoints</xpath>
+		<value>
+			<MaxHitPoints>250</MaxHitPoints>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="CAT_Handwear_EnsignGloves"]/statBases/ArmorRating_Sharp</xpath>
+		<value>
+			<ArmorRating_Sharp>14</ArmorRating_Sharp>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="CAT_Handwear_EnsignGloves"]/statBases/ArmorRating_Blunt</xpath>
+		<value>
+			<ArmorRating_Blunt>34</ArmorRating_Blunt>
+		</value>
+	</li>
+
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="CAT_Handwear_EnsignGloves"]/costList</xpath>
+		<value>
+			<DevilstrandCloth>10</DevilstrandCloth>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="CAT_Handwear_EnsignGloves"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<RangedCooldownFactor>-0.1</RangedCooldownFactor>
+				<HuntingStealth>0.1</HuntingStealth>
+				<MeleeDodgeChance>0.1</MeleeDodgeChance>
+				<CarryWeight>5</CarryWeight>
+				<CarryBulk>5</CarryBulk>
+			</equippedStatOffsets>
+		</value>
+	</li>
+
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="CAT_Handwear_EnsignGloves"]/apparel/layers</xpath>
+		<value>
+			<li>Shell</li>
+		</value>
+	</li>
+
+
+
+	<!-- ===== Ensign Boots ===== -->
+
+
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="CAT_Footwear_EnsignBoots"]/statBases/Mass</xpath>
+		<value>
+			<Bulk>4.5</Bulk>
+			<WornBulk>2</WornBulk>
+			<Mass>3</Mass>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="CAT_Footwear_EnsignBoots"]/statBases/MaxHitPoints</xpath>
+		<value>
+			<MaxHitPoints>250</MaxHitPoints>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="CAT_Footwear_EnsignBoots"]/statBases/ArmorRating_Sharp</xpath>
+		<value>
+			<ArmorRating_Sharp>14</ArmorRating_Sharp>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="CAT_Footwear_EnsignBoots"]/statBases/ArmorRating_Blunt</xpath>
+		<value>
+			<ArmorRating_Blunt>34</ArmorRating_Blunt>
+		</value>
+	</li>
+
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="CAT_Footwear_EnsignBoots"]/costList</xpath>
+		<value>
+			<DevilstrandCloth>10</DevilstrandCloth>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="CAT_Footwear_EnsignBoots"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MoveSpeed>0.1</MoveSpeed>
+				<PawnTrapSpringChance>-0.2</PawnTrapSpringChance>
+				<MeleeDodgeChance>0.1</MeleeDodgeChance>
+				<CarryWeight>5</CarryWeight>
+				<CarryBulk>5</CarryBulk>
+			</equippedStatOffsets>
+		</value>
+	</li>
+
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="CAT_Footwear_EnsignBoots"]/apparel/layers</xpath>
+		<value>
+			<li>Shell</li>
+		</value>
+	</li>
+
 
 
 	<!-- ===== Crusader Gloves ===== -->
@@ -688,7 +845,7 @@
 
 
 
-	<!-- ===== Flak Boots ===== -->
+	<!-- ===== Vacsuit Boots ===== -->
 
 
 

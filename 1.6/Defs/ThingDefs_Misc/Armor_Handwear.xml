@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+
+
+	<!-- ===== Ultratech Gloves ===== -->
+
+
+
+	<!-- ===== Eltex ===== -->
+
+	<ThingDef ParentName="PsychicApparelBase" MayRequire="Ludeon.Rimworld.Royalty">
+		<defName>CAT_Handwear_EltexGloves</defName>
+		<label>eltex gloves</label>
+		<description>A pair of gloves embedded with special psychic focusing materials. While not very protective, it enhances the wearer's psychic capabilities and helps to dissipate neural heat.</description>
+		<graphicData>
+			<texPath>Things/Handwear/CAT_EltexGloves</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tradeability>Sellable</tradeability>
+		<statBases>
+			<MarketValue>300</MarketValue>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Mass>0.15</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.03</ArmorRating_Heat>
+			<Insulation_Cold>3</Insulation_Cold>
+			<Insulation_Heat>1</Insulation_Heat>
+			<EquipDelay>1.0</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PsychicSensitivityOffset>0.1</PsychicSensitivityOffset>
+			<PsychicEntropyRecoveryRate>0.033</PsychicEntropyRecoveryRate>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Hands</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<only>(57,87,93)</only>
+				</li>
+				<li>
+					<only>(51,27,49)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+
+
 	<!-- ===== Spacer Tech Gloves ===== -->
 
 
@@ -171,6 +234,103 @@
 				<li>FabricationBench</li>
 			</recipeUsers>
 			<displayPriority>125</displayPriority>
+		</recipeMaker>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+	<!-- ===== Ensign ===== -->
+
+	<ThingDef ParentName="ApparelMakeableBase" MayRequire="det.spacerarsenal">
+		<defName>CAT_Handwear_EnsignGloves</defName>
+		<label>ensign gloves</label>
+		<description>A pair of advanced light power armor gloves, with plasteel plates carefully placed to protect the majority of the wearer's hand. Heat shields are interwoven in the plating, which provides superior heat protection. Sound-absorbing padding helps to muffle the actions of the wearer, and refined tactile amplifiers help the wearer to reload quickly and deflect blows.</description>
+		<graphicData>
+			<texPath>Things/Handwear/CAT_EnsignGloves</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0.05</generateCommonality>
+		<costList>
+			<Plasteel>15</Plasteel>
+			<Uranium>10</Uranium>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToMake>18000</WorkToMake>
+			<Mass>2.5</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.74</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.36</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.82</ArmorRating_Heat>
+			<Insulation_Cold>4</Insulation_Cold>
+			<Insulation_Heat>8</Insulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<RangedCooldownFactor>-0.1</RangedCooldownFactor>
+			<HuntingStealth>0.1</HuntingStealth>
+			<MeleeDodgeChance>1.0</MeleeDodgeChance>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Hands</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>SpacerMilitary</li>
+				<li>RoyalTier2</li>
+				<li>RoyalTier3</li>
+				<li>RoyalTier4</li>
+				<li>RoyalTier5</li>
+				<li>RoyalTier6</li>
+				<li>RoyalTier7</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>DV_EnsignArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<displayPriority>105</displayPriority>
 		</recipeMaker>
 		<colorGenerator Class="ColorGenerator_Options">
 			<options>

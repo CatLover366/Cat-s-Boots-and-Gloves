@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<RecipeDef MayRequire="VanillaExpanded.VPsycastsE">
+		<defName>CAT_Make_EltexGloves</defName>
+		<label>make eltex gloves</label>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Tailor</effectWorking>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+		<allowMixingIngredients>false</allowMixingIngredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>VPE_Eltex</li>
+			</thingDefs>
+			<categories>
+				<li>Textiles</li>
+			</categories>
+		</fixedIngredientFilter>
+		<researchPrerequisite>VPE_EltexGear</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+		<recipeUsers>
+			<li>HandTailoringBench</li>
+			<li>ElectricTailoringBench</li>
+		</recipeUsers>
+		<useIngredientsForColor>false</useIngredientsForColor>
+		<description>Make a pair of eltex gloves.</description>
+		<jobString>Making a pair of eltex gloves.</jobString>
+		<workAmount>5000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Textiles</li>
+					</categories>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VPE_Eltex</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<CAT_Handwear_EltexGloves>1</CAT_Handwear_EltexGloves>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VPE_CraftEltexGear" MayRequire="VanillaExpanded.VPsycastsE">
+		<defName>CAT_Make_EltexBoots</defName>
+		<label>make eltex boots</label>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Tailor</effectWorking>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+		<allowMixingIngredients>false</allowMixingIngredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>VPE_Eltex</li>
+			</thingDefs>
+			<categories>
+				<li>Textiles</li>
+			</categories>
+		</fixedIngredientFilter>
+		<researchPrerequisite>VPE_EltexGear</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+		<recipeUsers>
+			<li>HandTailoringBench</li>
+			<li>ElectricTailoringBench</li>
+		</recipeUsers>
+		<useIngredientsForColor>false</useIngredientsForColor>
+		<description>Make a pair of eltex boots.</description>
+		<jobString>Making a pair of eltex boots.</jobString>
+		<workAmount>5000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Textiles</li>
+					</categories>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VPE_Eltex</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<CAT_Footwear_EltexBoots>1</CAT_Footwear_EltexBoots>
+		</products>
+	</RecipeDef>
+
+</Defs>

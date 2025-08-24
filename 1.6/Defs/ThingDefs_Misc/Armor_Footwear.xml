@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+
+
+	<!-- ===== Ultratech Boots ===== -->
+
+
+
+	<!-- ===== Eltex ===== -->
+
+	<ThingDef ParentName="PsychicApparelBase" MayRequire="Ludeon.Rimworld.Royalty">
+		<defName>CAT_Footwear_EltexBoots</defName>
+		<label>eltex boots</label>
+		<description>A pair of boots embedded with special psychic focusing materials. While not very protective, it enhances the wearer's psychic capabilities and helps to dissipate neural heat.</description>
+		<graphicData>
+			<texPath>Things/Footwear/CAT_EltexBoots</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tradeability>Sellable</tradeability>
+		<statBases>
+			<MarketValue>300</MarketValue>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Mass>0.15</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.03</ArmorRating_Heat>
+			<Insulation_Cold>3</Insulation_Cold>
+			<Insulation_Heat>1</Insulation_Heat>
+			<EquipDelay>1.0</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PsychicSensitivityOffset>0.1</PsychicSensitivityOffset>
+			<PsychicEntropyRecoveryRate>0.033</PsychicEntropyRecoveryRate>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<only>(57,87,93)</only>
+				</li>
+				<li>
+					<only>(51,27,49)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+
+
 	<!-- ===== Spacer Tech Boots ===== -->
 
 
@@ -170,6 +233,103 @@
 				<li>FabricationBench</li>
 			</recipeUsers>
 			<displayPriority>125</displayPriority>
+		</recipeMaker>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+	<!-- ===== Ensign ===== -->
+
+	<ThingDef ParentName="ApparelMakeableBase" MayRequire="det.spacerarsenal">
+		<defName>CAT_Footwear_EnsignBoots</defName>
+		<label>ensign boots</label>
+		<description>A pair of advanced light power armor boots, with plasteel plates efficiently placed to cover all the important parts of the foot. Interwoven heat shields in the plating offers superior heat protection, and sophisticated servomotors allow the wearer to perform evasive maneuvers that would otherwise be impractical.</description>
+		<graphicData>
+			<texPath>Things/Footwear/CAT_EnsignBoots</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0.05</generateCommonality>
+		<costList>
+			<Plasteel>15</Plasteel>
+			<Uranium>10</Uranium>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToMake>18000</WorkToMake>
+			<Mass>2.5</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>0.74</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.36</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.82</ArmorRating_Heat>
+			<Insulation_Cold>4</Insulation_Cold>
+			<Insulation_Heat>8</Insulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>0.1</MoveSpeed>
+			<PawnTrapSpringChance>-0.2</PawnTrapSpringChance>
+			<MeleeDodgeChance>1.0</MeleeDodgeChance>
+		</equippedStatOffsets>
+		<thingCategories Inherit="False">
+			<li>CAT_BootsAndGloves</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+				<li>SpacerMilitary</li>
+				<li>RoyalTier2</li>
+				<li>RoyalTier3</li>
+				<li>RoyalTier4</li>
+				<li>RoyalTier5</li>
+				<li>RoyalTier6</li>
+				<li>RoyalTier7</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<soundWear>Wear_PowerArmor</soundWear>
+			<soundRemove>Remove_PowerArmor</soundRemove>
+		</apparel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>DV_EnsignArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<displayPriority>105</displayPriority>
 		</recipeMaker>
 		<colorGenerator Class="ColorGenerator_Options">
 			<options>
